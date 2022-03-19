@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/numberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Enter phone number"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            />
+
+        <ImageButton
+
+            android:id="@+id/backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="48dp"
+            android:contentDescription="backspace"
+            android:minHeight="48dp"
+            android:onClick="backspacePressed"
+            app:srcCompat="@drawable/backspace" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/button_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/button_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="9" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="*" />
+
+                <Button
+                    android:id="@+id/button_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/button_hashtag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="24sp"
+                    android:onClick="numberPressed"
+                    android:text="#" />
+
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/hangup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:layout_weight="1"
+                android:contentDescription="hangup"
+                android:minHeight="48dp"
+                android:onClick="closeActivity"
+                app:srcCompat="@drawable/hangup"/>
+
+            <ImageButton
+                android:id="@+id/call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:contentDescription="call"
+                android:minHeight="48dp"
+                android:layout_weight="1"
+                android:onClick="makeCall"
+                app:srcCompat="@drawable/call" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -13,11 +14,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static String numberString = "";
     private static final int MAX_NUMBER_SIZE = 12;
     private static final String DEFAULT_STRING = "Enter phone number";
+
+    private final static int ANOTHER_ACTIVITY_REQUEST_CODE = 2017;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,17 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:" + numberString));
             startActivity(intent);
+        }
+    }
+
+    public void addContact(View view) {
+
+        if (numberString.length() > 0) {
+            Intent intent = new Intent("ro.pub.cs.systems.eim.lab04.contactsmanager.intent.action.ContactsManagerActivity");
+            intent.putExtra("ro.pub.cs.systems.eim.lab04.contactsmanager.PHONE_NUMBER_KEY", numberString);
+            startActivityForResult(intent, ANOTHER_ACTIVITY_REQUEST_CODE);
+        } else {
+            Toast.makeText(getApplication(), "Please specify the number", Toast.LENGTH_LONG).show();
         }
     }
 }

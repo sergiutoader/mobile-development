@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ro.pub.cs.systems.eim.lab05.startedserviceactivity">
 
     <application
@@ -9,6 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver
+            android:name=".view.StartedServiceBroadcastReceiver">
+            <intent-filter>
+                <action android:name="ro.pub.cs.systems.eim.lab05.startedservice.string" />
+            </intent-filter>
+        </receiver>
         <activity android:name=".view.StartedServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

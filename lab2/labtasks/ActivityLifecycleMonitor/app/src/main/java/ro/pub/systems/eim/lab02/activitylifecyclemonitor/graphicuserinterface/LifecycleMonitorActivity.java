@@ -63,6 +63,7 @@ public class LifecycleMonitorActivity extends AppCompatActivity {
         Button cancelButton = (Button) findViewById(R.id.cancel_button);
         cancelButton.setOnClickListener(buttonClickListener);
 
+
         if (savedInstanceState != null) {
             Log.d(Constants.TAG, "onCreate() method was invoked with a previous state");
             String username = savedInstanceState.getString(Constants.USERNAME_TAG);

@@ -52,6 +52,7 @@
 
         <Button
             android:id="@+id/ok_button"
+            android:onClick="myFunction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -65,5 +66,11 @@
             android:text="@string/cancel_button_content"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/ceva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>

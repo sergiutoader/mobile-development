@@ -11,15 +11,15 @@ import java.util.Date;
 import java.util.Random;
 
 public class PracticalTest01Service extends Service {
-    private Random random;
+    
     public PracticalTest01Service() {
-        random = new Random();
+        
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        int leftValue = intent.getIntExtra(MainActivity.LEFT_FIELD_CONTENT_KEY, 0);
-        int rightValue = intent.getIntExtra(MainActivity.RIGHT_FIELD_CONTENT_KEY, 0);
+        String name = intent.getIntExtra(MainActivity.LEFT_FIELD_CONTENT_KEY, 0);
+        String group = intent.getIntExtra(MainActivity.RIGHT_FIELD_CONTENT_KEY, 0);
 
         Thread dedicatedThread = new Thread(() -> {
             double arithmetic = (1.0 * leftValue + 1.0 * rightValue) / 2;
